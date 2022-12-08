@@ -10,8 +10,6 @@ import (
 	"sync"
 )
 
-// var esUrl = "http://es-cn-v0h19nq6f0009f94y.elasticsearch.aliyuncs.com:9200"
-//var esUrl = "http://47.110.190.246:35672"
 
 var esUrl = "http://192.168.3.231:9200"
 
@@ -23,9 +21,6 @@ var (
 )
 
 func main() {
-
-	//client, err := elastic.NewClient(elastic.SetURL(esUrl), elastic.SetSniff(false), elastic.SetBasicAuth("elastic", "elastic"))
-	//client, err := elastic.NewClient(elastic.SetURL(esUrl), elastic.SetSniff(false), elastic.SetBasicAuth("elastic", "34529@mxnavi"))
 	client, err := elastic.NewClient(elastic.SetURL(esUrl), elastic.SetSniff(false))
 	if err != nil {
 		fmt.Println(err)
