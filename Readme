@@ -1,0 +1,2 @@
+获取ES中 所有 的 skywalking的 index template
+curl -s -u elastic:elastic -XGET http://192.168.3.231:9200/_cat/templates|grep "mx-sw_"|awk  '{print $1}'
